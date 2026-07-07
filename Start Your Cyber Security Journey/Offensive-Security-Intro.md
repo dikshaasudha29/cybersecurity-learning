@@ -1,0 +1,148 @@
+# Offensive Security Intro
+
+> **Room:** Offensive Security Intro  
+> **Learning Path:** Start Your Cyber Security Journey
+
+---
+
+# Room Objective
+
+Introduction to the fundamentals of Offensive Security, ethical hacking, and how attackers identify and exploit vulnerabilities to improve an organization's security.
+
+---
+
+# Skills Learned
+
+- Offensive Security
+- Ethical Hacking
+- Enumeration
+- Exploitation
+- Web Applications
+
+---
+
+# Tools Used
+
+- TryHackMe AttackBox
+- Firefox Browser
+- Terminal
+
+---
+
+# Task 1 – Introduction
+
+## Objective
+
+Understanding the role of offensive security
+
+## Key Concepts
+
+- Offensive Security is about thinking like an attacker to find weaknesses before real hackers do.
+
+## What I Learned
+
+This task introduced the mindset of an ethical hacker. I learned that offensive security focuses on proactively finding weaknesses in systems before malicious attackers can exploit them. The goal is to improve security rather than cause damage.
+
+---
+
+# Task 2 – Starting the lab
+
+## Objective
+
+Analysing the simulated target environment
+
+## Key Concepts
+
+- Virtualization / Sandboxing: Isolated virtual environment to simulate a real-world infrastructure safely.
+- Target Reconnaissance: Interfacing with the target application to gather initial data points (like account details).
+
+## Commands Used
+
+GUI Interaction: Initial interactive engagement via the browser-based virtual desktop environment by launching the simulated application interface.
+
+## What I Learned
+
+How to navigate a target interface to locate specific organizational or systemic data points (e.g., extracting the account number XXXX).
+
+---
+
+# Task 3 – Find Hidden Pages
+
+## Objective
+
+Enumerate hidden web directories and identify unlinked URL paths
+
+## Key Concepts
+
+- Directory Brute-Forcing: Using automated wordlists to guess hidden file and folder names on a web server.
+- Information Disclosure: A vulnerability where a website unintentionally exposes sensitive pages to unauthorized users.
+- Attack Surface Mapping: Discovering all possible entry points or hidden functionalities of a target system.
+
+## Commands Used
+
+```bash
+dirb http://example.com
+```
+— Launches the DIRB utility to scan the target web server for hidden directories using a default wordlist.
+
+
+## What I Learned
+
+- How to use automated terminal tools to find hidden infrastructure paths.
+- Hidden pages (like /bank-transfer) represent a massive security risk if left publicly accessible.
+- How to interpret tool outputs, specifically identifying valid pages discovered during a scan (indicated by the + symbol).
+
+## Notes
+
+- Wordlist Dependence: Directory busters rely entirely on the quality and size of the wordlist used to guess URLs.
+- Remediation: Securing hidden pages requires strict access control lists (ACLs) and ensuring unlinked sensitive directories are completely restricted or removed from public-facing servers.
+
+---
+
+# Task 4 – Attack the Admin Page
+
+## Objective
+
+- Access unauthorized administrative interfaces via discovered hidden endpoints
+- Exploit broken access controls to manipulate application data and state
+
+## Key Concepts
+
+- Security through Obscurity: The flawed practice of relying on hidden URLs or hidden features rather than real access controls for security.
+- Broken Access Control: A critical vulnerability where an application allows an unauthenticated user to access privileged functions (like adding money).
+- Business Logic Exploitation: Bypassing intended user workflows to make unauthorized structural modifications (e.g., arbitrarily depositing funds into an account).
+
+## Commands Used
+
+- No terminal commands were used for this phase.
+- URL Manipulation / Navigation: Appended the discovered directory path to the main address bar: http://example.hiddendomainext
+
+## What I Learned
+
+- Finding a hidden URL is only the first step; the actual danger occurs when that hidden page lacks proper login or permission checks.
+- Security failures can have direct operational and financial consequences (like unauthorized balance manipulation).
+- How capturing a "flag" serves as cryptographic proof of a successful exploit in cybersecurity training.
+
+## Notes
+
+- The Obscurity Fallacy: Never assume a feature is secure just because it is unlinked on the homepage; automated tools will always discover it.
+- Remediation: To secure this flaw, developers must enforce strict server-side Role-Based Access Control (RBAC). The server must verify a valid administrative session before rendering the page or processing any balance updates.
+
+---
+
+# Overall Takeaways
+
+- **Offensive Security is Proactive**: You don't wait to get hacked. You actively attack your own systems first to find and patch the holes before malicious actors do.
+- **Obscurity is Not Security**: Just because a webpage or directory isn't linked on your homepage doesn't mean it is safe. Automated tools (like dirb) will find it in seconds.
+- **Recon Is Key**: Cybersecurity isn't just random hacking; it is a structured process. You use automation to map out the entire website's structure before trying to exploit anything.
+- **Enforce Strict Access Controls**: Every sensitive action (like moving money) must verify who the user is on the backend server. Relying on the user "not knowing the URL" leaves the system wide open to simple manipulation.
+
+---
+
+# References
+
+- TryHackMe Room
+
+---
+
+> **Note:** This document contains my personal learning notes and summaries. It does not include room answers, flags, or copyrighted walkthrough content.

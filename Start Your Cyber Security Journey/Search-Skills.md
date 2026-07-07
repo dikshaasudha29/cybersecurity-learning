@@ -1,0 +1,192 @@
+# Search Skills
+
+> **Room:** Search Skills
+> **Learning Path:** Start Your Cyber Security Journey
+
+---
+
+# Room Objective
+
+The overarching goal was to master advanced research methodologies and open-source intelligence (OSINT) workflows. This involved leveraging specialized internet-wide scanners, collaborative threat databases, and authoritative documentation platforms to efficiently gather technical data, assess software vulnerabilities, and verify exploit code safely.
+
+---
+
+# Skills Learned
+
+- **Passive Asset Reconnaissance**: Querying public internet mapping registries to discover host details and open service flags without direct target interaction.
+- **Threat Consensus Evaluation**: Aggregating global multi-vendor signature catalogs to distinguish malicious artifacts from benign files.
+- **Vulnerability Risk Triage**: Analyzing public dictionary indexes and severity scoring frameworks to classify structural infrastructure risks.
+- **Definitive Documentation Auditing**: Navigating built-in terminal manuals to verify command syntax and utility execution parameters.
+- **Adversarial Code Verification**: Auditing open-source public code repositories to safely source active exploit Proof-of-Concepts (PoCs) while identifying potential supply chain risks.
+
+---
+
+# Tools Used
+
+- **TryScanMe (Shodan Simulator)**: Used for internet-wide device scanning and banner-grabbing filters.
+- **TryDetectMe (VirusTotal Simulator)**: Used for multi-engine malware definition aggregation and threat consensus auditing.
+- **Vulnerability Database Platform**: Used for tracking historical CVE metrics and CVSS severity classifications.
+- **Linux Terminal Manual System (man)**: Used for local, offline command-line syntax verification and structural troubleshooting.
+- **GitHub Platform Simulator**: Used for researching community-shared threat intelligence and proof-of-concept repository scripts.
+
+---
+
+# Task 1 – Introduction
+
+## Objective
+
+- Master Open Source Intelligence (OSINT) and specialized search methodologies.
+- Leverage technical documentation to research exploits and threat actors.
+
+## Key Concepts
+
+- Information Gathering: The fundamental reconnaissance process of collecting data from public and specialized internet registries.
+- Query Optimization: Framing precise technical searches to bypass irrelevant information when researching vulnerabilities.
+
+## What I Learned
+
+- Finding an exploit or understanding a tool depends heavily on knowing where to look, not just what to search.
+- Advanced search proficiency is a critical baseline skill required for both offensive and defensive cybersecurity roles.
+
+---
+
+# Task 2 – Shodan (TryScanMe)
+
+## Objective
+
+- Leverage Open Source Intelligence (OSINT) search engines to perform passive infrastructure reconnaissance.
+- Filter internet-wide scan data to identify specific target deployment details.
+
+## Key Concepts
+
+- Internet of Things (IoT) Search Engine: Platforms (like Shodan or TryScanMe) that map public internet-facing devices and services globally.
+- Banner Grabbing / Header Analysis: Extracting metadata (like apache 2.4.1) broadcasted by open ports to discover running software versions.
+- Query Filtering: Utilizing specific parameters (country, port, org, hostname) to reduce noise and pinpoint target assets.
+
+## Tools Used
+
+- TryScanMe (Shodan Simulator) — A specialized web intelligence scanner used to query public IP networks, open ports, and system banners.
+
+## What I Learned
+
+- How to use search filters to narrow down massive global network data into highly specific asset lists.
+- That public systems constantly expose identification data (banners) that can be linked straight to known vulnerabilities (CVEs).
+- How to look up an IP address inside a threat intelligence engine to trace its associated domain name and hosting organization.
+
+---
+
+# Task 3 – VirusTotal (TryDetectMe)
+
+## Objective
+
+- Utilize automated malware analysis aggregators to evaluate suspicious assets.
+- Determine security consensus on potentially malicious files and indicators.
+
+## Key Concepts
+
+- Multi-Engine Scanning: Aggregating detection definitions from numerous security vendors to maximize identification accuracy.
+- Threat Consensus: Gauging the collective assessment of the security community to verify if a file or URL is truly malicious.
+- Blue Team Triage: Rapidly auditing unknown files, domains, or cryptographic hashes during incident response workflows.
+
+## Tools Used
+
+- TryDetectMe (VirusTotal Simulator) — A threat analysis interface used to analyze files against widespread antimalware databases.
+
+
+## What I Learned
+
+- Checking a file hash or name against known vendor definitions helps quickly identify signature-based malware threats.
+- Gathering threat consensus streamlines decision-making during security alerts, separating true infections from false positives.
+
+---
+
+#  Task 4 – Vulnerability Databases (CVE)
+
+## Objective
+
+- Research known software flaws using standardized vulnerability identification frameworks.
+- Analyze severity metrics to determine organizational security priorities.
+
+## Key Concepts
+
+- Common Vulnerabilities and Exposures (CVE): A universal dictionary tracking publicly known security flaws using unique standardized identifiers.
+- Common Vulnerability Scoring System (CVSS): A framework used to rate vulnerability severity based on metric factors like impact and complexity.
+- Risk Prioritization: The operational practice of addressing highest-scoring vulnerabilities first to minimize corporate attack surfaces.
+
+## Tools Used
+
+- TryHackMe Vulnerability Database Simulator: A platform used to query structural threat definitions and risk classifications.
+
+## What I Learned
+
+- Standard identifiers like CVE numbers allow security tools, researchers, and vendors to accurately reference the exact same technical bug.
+- CVSS classifications categorize security flaws into distinct levels to help teams allocate mitigation resources effectively.
+- Exploit databases pair CVE numbers with proof of concept scripts to demonstrate how a vulnerability works in a lab setting.
+
+---
+
+#  Task 5 – Technical Documentation (MAN)
+
+## Objective
+
+- Utilize built-in operating system documentation to verify command syntax and flag behavior.
+- Leverage authoritative vendor manuals to troubleshoot tools instead of relying on third-party guides.
+
+## Key Concepts
+
+- Manual Pages (man): Built-in terminal documentation utility in Unix-like systems providing definitive guides for commands and utilities.
+- Command-Line Arguments: Flags and parameters used to modify the behavior of a network or system utility.
+- Syntactical Structure: The exact order and format required by an application to execute network connections or local tasks successfully.
+
+## Tools Used
+
+- Linux Terminal Manual Simulator (man): A standard documentation browser accessed directly via the command-line interface.
+
+## What I Learned
+
+- Official vendor documentation provides the most precise source of truth for tool functionalities and deployment parameters.
+- Running the manual utility displays complete usage templates, including concrete syntax examples located within the document body.
+- Reading standard system strings helps rapidly construct valid utility executions like connecting to target endpoints over specific port numbers.
+
+---
+
+#  Task 6 – GitHub
+
+## Objective
+
+- Utilize built-in operating system documentation to verify command syntax and flag behavior.
+- Leverage authoritative vendor manuals to troubleshoot tools instead of relying on third-party guides.
+
+## Key Concepts
+
+- Proof of Concept (PoC): Publicly shared code or scripts demonstrating that a specific security vulnerability can be successfully exploited.
+- Community-Driven Threat Intelligence: Aggregating exploit data directly from independent security researchers before official vendor patches publish.
+- Supply Chain Risk: The danger of running unverified community scripts that might contain malicious payloads designed to compromise the testing machine.
+
+## Tools Used
+
+- GitHub Platform Simulator: An open-source code repository interface used to search for exploit scripts and technical write-ups.
+
+## What I Learned
+
+- Public repositories are often the fastest source for finding active scanner scripts and operational definitions for new CVE records.
+- Executing community-authored exploit scripts requires mandatory code reviews to ensure the testing environment remains safe from fake or backdoor payloads.
+- Analyzing repository README files provides rapid insight into execution dependencies and the specific script names chosen to demonstrate a flaw.
+
+---
+
+# Overall Takeaways
+
+- **Location Over Content**: Efficient technical research relies on knowing exactly *where* to search rather than simply trying random keyword inputs.
+- **Leverage Standardized Indicators**: Relying on universal dictionary structures (like CVE codes) ensures completely uniform tracking across global vendors, defenders, and researchers.
+- **Verify Before Execution**: Publicly hosted exploit scripts and community intelligence channels are highly valuable for fast alerting, but they demand rigorous manual code review to avoid executing hidden, malicious payloads inside your testing lab.
+
+---
+
+# References
+
+- TryHackMe Room
+
+---
+
+> **Note:** This document contains my personal learning notes and summaries. It does not include room answers, flags, or copyrighted walkthrough content.
